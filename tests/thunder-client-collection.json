@@ -1,0 +1,179 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "bda-atividade-final",
+    "dateExported": "2023-07-04T13:23:44.822Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "produto",
+            "containerId": "",
+            "created": "2023-07-04T13:10:09.866Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "31c1aba9-3996-49ee-88c1-e43dec01b2ed",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "get produtos (all)",
+            "url": "http://localhost:3000/produtos",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-04T12:14:56.435Z",
+            "modified": "2023-07-04T13:10:16.155Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3bd87682-aa68-43a7-b3b6-e7c04a0f0bde",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "get produto/id (one)",
+            "url": "http://localhost:3000/produtos/880",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-04T12:28:03.692Z",
+            "modified": "2023-07-04T13:10:24.268Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dc6f9554-e9f2-4fa5-9071-8c80b38e35b8",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "post produto (new)",
+            "url": "http://localhost:3000/produtos/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-04T12:33:23.208Z",
+            "modified": "2023-07-04T13:10:29.346Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "modelo",
+                        "value": "gtx 1660 super"
+                    },
+                    {
+                        "name": "marca",
+                        "value": "asus"
+                    },
+                    {
+                        "name": "categoria",
+                        "value": "placa de vídeo"
+                    },
+                    {
+                        "name": "preco",
+                        "value": "1200"
+                    },
+                    {
+                        "name": "id_prod",
+                        "value": "881"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "81ee2bf3-de4e-4b64-adb7-8b14410d6120",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "put produto (update)",
+            "url": "http://localhost:3000/produtos/880",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-07-04T12:37:50.679Z",
+            "modified": "2023-07-04T13:10:30.898Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "preco",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "modelo",
+                        "value": "gtx 1050"
+                    },
+                    {
+                        "name": "marca",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "categoria",
+                        "value": "placa de vídeo",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "preco",
+                        "value": "",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4041887d-b7ed-4551-a6ec-56c171678108",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "delete produto (one)",
+            "url": "http://localhost:3000/produtos/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-07-04T12:56:38.359Z",
+            "modified": "2023-07-04T13:10:32.091Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2ba8bb25-3020-48f0-87e2-87209538893d",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "delete produto (many)",
+            "url": "http://localhost:3000/produtos/many",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-07-04T13:14:18.116Z",
+            "modified": "2023-07-04T13:22:57.794Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"ids\": [5558, 5559, 5560, 5561]\r\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
