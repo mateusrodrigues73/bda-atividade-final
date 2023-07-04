@@ -167,25 +167,25 @@ const deleteManyProdutos = async (ids) => {
  * @returns Array de objetos Produto
  */
 const getFilteredProdutos = async (field = 'nome', term = '') => {
-    try {
-        let resultados = []
-        console.log({ field, term })
-        await changeIndexes(field)
+  try {
+    let resultados = [];
+    console.log({field, term});
+    await changeIndexes(field);
+    let filtro = {
+      $text: {$search: term}
+    };
+    let opcoes = {
+      projection: {_id: 0}
+    };
+    console.log(opcoes);
+    resultados = await collection.find(filtro, opcoes).toArray();
+    return resultados;
+  } catch (error) {
+    console.log(error);
+    return false;
+  };
+};
 
-        let filtro = {
-            $text: { $search: term }
-        }
-        let opcoes = {
-            projection: { _id: 0 }
-        }
-        console.log(opcoes)
-        resultados = await collection.find(filtro, opcoes).toArray()
-        return resultados;
-    } catch (error) {
-        console.log(error)
-        return false;
-    }
-}
 /**
  * Rota da API:
  * GET /produtos/filter_price/?greater=${min}&less=${max}
@@ -196,41 +196,39 @@ const getFilteredProdutos = async (field = 'nome', term = '') => {
  * @returns Array de objetos Produto
  */
 const getProdutosPriceRange = async (min = 0, max = 0, sort = 1) => {
-    try {
-        let resultados = []
-        console.log({ min, max })
-        let filtro = {
-            $and: [
-                { preco: { $gte: min } },
-                { preco: { $lte: max } }
-            ]
-        }
-        let opcoes = {
-            sort: { preco: parseInt(sort) },
-            projection: { _id: 0 }
-        }
-        console.log(opcoes)
-        resultados = await collection.find(filtro, opcoes).toArray()
-        return resultados;
-    } catch (error) {
-        console.log(error)
-        return false;
-    }
-}
+  try {
+    let resultados = [];
+    console.log({ min, max });
+    let filtro = {
+      $and: [
+        {preco: { $gte: min }},
+        {preco: { $lte: max }},
+      ]
+    };
+    let opcoes = {
+      sort: {preco: parseInt(sort)},
+      projection: {_id: 0},
+    };
+    console.log(opcoes);
+    resultados = await collection.find(filtro, opcoes).toArray();
+    return resultados;
+  } catch (error) {
+    console.log(error)
+    return false;
+  };
+};
 
 const changeIndexes = async (field) => {
-
-    const indexes = await collection.indexes()
-    const textIndexes = indexes.filter(index => index.key?._fts === 'text')
-    const indexName = textIndexes[0]?.name
-
-    if (!indexName || indexName !== field + '_text') {
-        if (indexName)
-            await collection.dropIndex(indexName)
-        
-        await collection.createIndex({ [field]: 'text' })
-    }
-}
+  const indexes = await collection.indexes();
+  const textIndexes = indexes.filter(index => index.key?._fts === 'text');
+  const indexName = textIndexes[0]?.name;
+  if (!indexName || indexName !== field + '_text') {
+    if (indexName) {
+      await collection.dropIndex(indexName);
+    };
+    await collection.createIndex({[field]: 'text'});
+  };
+};
 
 export {
   getAllProdutos,

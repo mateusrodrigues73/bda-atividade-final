@@ -1,4 +1,4 @@
-import * as model from '../models/produtos.js';
+import * as model from '../models/produto.js';
 
 const index = async (req, res) => {
   let listProds;
@@ -49,6 +49,7 @@ const show = async (req, res) => {
   console.log(produto);
   if(!produto) {
     res.status(404);
+    res.send('Nenhum produto encontrado!');
   };
   res.send(produto);
 };
@@ -62,7 +63,7 @@ const store = async (req, res) => {
       id_prod: +formData.id_prod,
       modelo: formData.modelo,
       marca: formData.marca,
-      categoria: +formData.categoria,
+      categoria: formData.categoria,
       preco: +formData.preco,
     };
     if (!produto.preco && formData.preco.indexOf(',')) {
@@ -91,6 +92,10 @@ const update = async (req, res) => {
     if (!req.params.id || req.params.id == 'undefined') {
       throw new Error('O ID do produto é obrigatório!');
     };
+    const produto = await model.getProdutoById(req.params.id);
+    if (!produto) {
+      throw new Error('Produto não encontrado!');
+    }
     const newProduto = {...formData};
     console.log({newProduto});
     newProduto.id_prod = +req.params.id;
@@ -119,6 +124,10 @@ const remove = async (req, res) => {
     if (!req.params.id || !req.params.id === 'undefined') {
       res.status = 400;
       throw new Error('Erro, falta o parâmetro ID na url!');
+    }
+    const produto = await model.getProdutoById(req.params.id);
+    if (!produto) {
+      throw new Error('Produto não encontrado!');
     }
     const id = parseInt(req.params.id)
     if (!(await model.deleteProduto(id))) {
