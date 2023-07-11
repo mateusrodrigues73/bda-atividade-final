@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "64ad5a2cee662737aa49e3b6",
+    "id_forum": 1,
+    "titulo": "fórum 1",
+    "tema": "tema 1"
+  },
+  {
+    "_id": "64ad5b6ba4d8a11d34f897f3",
+    "id_forum": 2,
+    "titulo": "fórum 2",
+    "tema": "tema 2"
+  },
+  {
+    "_id": "64ad9af000d8bc0fb90c1df4",
+    "id_forum": 3,
+    "titulo": "fórum 3",
+    "tema": "tema 3"
+  },
+  {
+    "_id": "64ad9af000d8bc0fb90c1df5",
+    "id_forum": 4,
+    "titulo": "fórum 4",
+    "tema": "tema 4"
+  }
+]

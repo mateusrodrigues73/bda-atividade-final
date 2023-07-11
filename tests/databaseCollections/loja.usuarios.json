@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "64ad94949c111ac1afd2afab",
+    "id_usuario": 1,
+    "nome": "José",
+    "email": "j@gmail.com",
+    "senha": "khFHN&7856Bgd"
+  },
+  {
+    "_id": "64ad94a69c111ac1afd2afac",
+    "id_usuario": 2,
+    "nome": "Maria",
+    "email": "m@gmail.com",
+    "senha": "khFHN&7856Bgd"
+  }
+]

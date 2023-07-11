@@ -1,0 +1,51 @@
+[
+  {
+    "id_prod": 9882,
+    "modelo": "m7",
+    "marca": "fortrek",
+    "categoria": "mouse",
+    "preco": 99
+  },
+  {
+    "id_prod": 9881,
+    "modelo": "mitra",
+    "marca": "reddragon",
+    "categoria": "teclado mecânico",
+    "preco": 400
+  },
+  {
+    "id_prod": 9880,
+    "modelo": "a520",
+    "marca": "galax",
+    "categoria": "placa de mãe",
+    "preco": 600
+  },
+  {
+    "id_prod": 880,
+    "modelo": "gtx 1050",
+    "marca": "asus",
+    "categoria": "placa de vídeo",
+    "preco": 1000
+  },
+  {
+    "id_prod": 881,
+    "modelo": "gtx 1660 super",
+    "marca": "asus",
+    "categoria": "placa de vídeo",
+    "preco": 1500
+  },
+  {
+    "id_prod": 8880,
+    "modelo": "gtx 1660 super",
+    "marca": "asus",
+    "categoria": "placa de vídeo",
+    "preco": 2000
+  },
+  {
+    "id_prod": 8881,
+    "modelo": "gtx 1650",
+    "marca": "galax",
+    "categoria": "placa de vídeo",
+    "preco": 2500
+  }
+]
