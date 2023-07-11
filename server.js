@@ -3,6 +3,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 
 import produtoRoute from './routes/produtoRoute.js';
+import usuarioRoute from './routes/usuarioRoute.js';
+import forumRoute from './routes/forumRoute.js'
 
 const app = express();
 const port = 3000;
@@ -27,3 +29,5 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/produtos', produtoRoute);
+app.use('/usuarios', usuarioRoute);
+app.use('/foruns', forumRoute);

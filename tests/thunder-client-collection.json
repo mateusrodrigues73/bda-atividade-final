@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "bda-atividade-final",
-    "dateExported": "2023-07-04T13:23:44.822Z",
+    "dateExported": "2023-07-11T13:44:01.374Z",
     "version": "1.1",
     "folders": [
         {
@@ -10,6 +10,20 @@
             "containerId": "",
             "created": "2023-07-04T13:10:09.866Z",
             "sortNum": 20000
+        },
+        {
+            "_id": "78e1e491-1673-4e67-8965-7938e5538272",
+            "name": "usuario",
+            "containerId": "",
+            "created": "2023-07-11T13:09:29.005Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "06e63906-2916-4dee-9294-91ac62aafdf1",
+            "name": "forum",
+            "containerId": "",
+            "created": "2023-07-11T13:32:37.644Z",
+            "sortNum": 40000
         }
     ],
     "requests": [
@@ -28,6 +42,39 @@
             "tests": []
         },
         {
+            "_id": "8d2eb81f-b60e-4b9e-938b-31aff5d3479a",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "78e1e491-1673-4e67-8965-7938e5538272",
+            "name": "get usuarios (all)",
+            "url": "http://localhost:3000/usuarios",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-11T13:09:29.005Z",
+            "modified": "2023-07-11T13:12:44.986Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f59041ca-f44f-4f06-aec1-a12f64a83a79",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "06e63906-2916-4dee-9294-91ac62aafdf1",
+            "name": "get foruns (all)",
+            "url": "http://localhost:3000/foruns",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-11T13:32:37.644Z",
+            "modified": "2023-07-11T13:35:04.844Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
             "_id": "3bd87682-aa68-43a7-b3b6-e7c04a0f0bde",
             "colId": "40df9c37-755f-4560-935f-1bf26369375b",
             "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
@@ -38,6 +85,39 @@
             "created": "2023-07-04T12:28:03.692Z",
             "modified": "2023-07-04T13:10:24.268Z",
             "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d011eafa-0188-4728-98ab-db5fad179d13",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "78e1e491-1673-4e67-8965-7938e5538272",
+            "name": "get usuario/id (one)",
+            "url": "http://localhost:3000/usuarios/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-11T13:09:29.006Z",
+            "modified": "2023-07-11T13:13:17.507Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a103a117-1e63-4dda-8c42-b87dccb53bfa",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "06e63906-2916-4dee-9294-91ac62aafdf1",
+            "name": "get forum/id (one)",
+            "url": "http://localhost:3000/foruns/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-11T13:32:37.645Z",
+            "modified": "2023-07-11T13:34:50.818Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "tests": []
         },
@@ -81,6 +161,84 @@
                     {
                         "name": "id_prod",
                         "value": "881"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "895e2d34-828d-4c82-841f-c1cf1707ddb4",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "78e1e491-1673-4e67-8965-7938e5538272",
+            "name": "post usuario (new)",
+            "url": "http://localhost:3000/usuarios/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-11T13:09:29.008Z",
+            "modified": "2023-07-11T13:11:40.226Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "José"
+                    },
+                    {
+                        "name": "email",
+                        "value": "j@gmail.com"
+                    },
+                    {
+                        "name": "senha",
+                        "value": "khFHN&7856Bgd"
+                    },
+                    {
+                        "name": "id_usuario",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c0e909f5-a5b9-44da-a6b8-875669ed0779",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "06e63906-2916-4dee-9294-91ac62aafdf1",
+            "name": "post forum (new)",
+            "url": "http://localhost:3000/foruns/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-11T13:32:37.646Z",
+            "modified": "2023-07-11T13:38:51.888Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "titulo",
+                        "value": "mais um título"
+                    },
+                    {
+                        "name": "tema",
+                        "value": "mais um tema"
+                    },
+                    {
+                        "name": "id_forum",
+                        "value": "3"
                     }
                 ]
             },
@@ -138,6 +296,93 @@
             "tests": []
         },
         {
+            "_id": "ff06083a-fb5d-4f4a-ba10-c15f8aca21a0",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "78e1e491-1673-4e67-8965-7938e5538272",
+            "name": "put usuario (update)",
+            "url": "http://localhost:3000/usuarios/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-07-11T13:09:29.009Z",
+            "modified": "2023-07-11T13:16:10.551Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "preco",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "email",
+                        "value": "jose@hotmail.com"
+                    },
+                    {
+                        "name": "senha",
+                        "value": "",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "3fc1ad30-a10b-4ad2-b1eb-97053e415f87",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "06e63906-2916-4dee-9294-91ac62aafdf1",
+            "name": "put forum (update)",
+            "url": "http://localhost:3000/foruns/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-07-11T13:32:37.647Z",
+            "modified": "2023-07-11T13:42:34.311Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "preco",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "titulo",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "tema",
+                        "value": "tema 2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
             "_id": "4041887d-b7ed-4551-a6ec-56c171678108",
             "colId": "40df9c37-755f-4560-935f-1bf26369375b",
             "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
@@ -148,6 +393,44 @@
             "created": "2023-07-04T12:56:38.359Z",
             "modified": "2023-07-04T13:10:32.091Z",
             "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3e869a85-5d5f-4d90-9c55-aa887b1980a3",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "78e1e491-1673-4e67-8965-7938e5538272",
+            "name": "delete usuario (one)",
+            "url": "http://localhost:3000/usuarios/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-07-11T13:09:29.010Z",
+            "modified": "2023-07-11T13:17:49.077Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9e7cadc2-05ae-4797-9ee3-7e43e5a45f3d",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "06e63906-2916-4dee-9294-91ac62aafdf1",
+            "name": "delete forum (one)",
+            "url": "http://localhost:3000/foruns/2",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-07-11T13:32:37.648Z",
+            "modified": "2023-07-11T13:42:59.270Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
             "params": [],
             "tests": []
         },
