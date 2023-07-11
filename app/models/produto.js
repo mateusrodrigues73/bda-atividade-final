@@ -157,16 +157,16 @@ const deleteManyProdutos = async (ids) => {
   };
 };
 
-/** Filtra Produtos por termo de busca para o campo nome ou descricao 
+/** Filtra Produtos por termo de busca para o campo modelo ou marca 
  * Rotas da API:
  * GET /produtos?field=${campo}&search=${termo}
- * campo => nome || descricao
+ * campo => modelo || marca
  * 
- * @param {*} field campo de busca (nome ou descricao)
+ * @param {*} field campo de busca (modelo ou marca)
  * @param {*} term termo de busca (palavra a ser encontrada)
  * @returns Array de objetos Produto
  */
-const getFilteredProdutos = async (field = 'nome', term = '') => {
+const getFilteredProdutos = async (field = 'modelo', term = '') => {
   try {
     let resultados = [];
     console.log({field, term});

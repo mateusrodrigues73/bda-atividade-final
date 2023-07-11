@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "bda-atividade-final",
-    "dateExported": "2023-07-11T14:59:19.936Z",
+    "dateExported": "2023-07-11T15:29:44.457Z",
     "version": "1.1",
     "folders": [
         {
@@ -141,7 +141,7 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-07-04T12:33:23.208Z",
-            "modified": "2023-07-04T13:10:29.346Z",
+            "modified": "2023-07-11T15:27:04.146Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -155,11 +155,11 @@
                 "form": [
                     {
                         "name": "modelo",
-                        "value": "gtx 1660 super"
+                        "value": "gtx 1650"
                     },
                     {
                         "name": "marca",
-                        "value": "asus"
+                        "value": "galax"
                     },
                     {
                         "name": "categoria",
@@ -167,11 +167,11 @@
                     },
                     {
                         "name": "preco",
-                        "value": "1200"
+                        "value": "1300"
                     },
                     {
                         "name": "id_prod",
-                        "value": "881"
+                        "value": "8881"
                     }
                 ]
             },
@@ -467,6 +467,56 @@
                 "raw": "{\r\n  \"ids\": [5558, 5559, 5560, 5561]\r\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "4d0ba412-0296-4f56-b54e-87ba13e5510e",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "search ",
+            "url": "http://localhost:3000/produtos/?field=modelo&search=gtx",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-07-11T15:22:34.387Z",
+            "modified": "2023-07-11T15:27:48.216Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "field",
+                    "value": "modelo",
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "gtx",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "b59e1e43-bb6d-4c52-abb1-c9d4711275d4",
+            "colId": "40df9c37-755f-4560-935f-1bf26369375b",
+            "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
+            "name": "filter price",
+            "url": "http://localhost:3000/produtos/filter_price?greater=1000&less=1300",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-07-11T15:28:26.991Z",
+            "modified": "2023-07-11T15:29:09.333Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "greater",
+                    "value": "1000",
+                    "isPath": false
+                },
+                {
+                    "name": "less",
+                    "value": "1300",
+                    "isPath": false
+                }
+            ],
             "tests": []
         }
     ]
