@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "bda-atividade-final",
-    "dateExported": "2023-07-11T13:44:01.374Z",
+    "dateExported": "2023-07-11T14:59:19.936Z",
     "version": "1.1",
     "folders": [
         {
@@ -32,13 +32,24 @@
             "colId": "40df9c37-755f-4560-935f-1bf26369375b",
             "containerId": "cd6bc8f3-449b-48da-8fe0-e16eac5e9e7a",
             "name": "get produtos (all)",
-            "url": "http://localhost:3000/produtos",
+            "url": "http://localhost:3000/produtos?order=preco&reverse=0",
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-04T12:14:56.435Z",
-            "modified": "2023-07-04T13:10:16.155Z",
+            "modified": "2023-07-11T14:59:04.563Z",
             "headers": [],
-            "params": [],
+            "params": [
+                {
+                    "name": "order",
+                    "value": "preco",
+                    "isPath": false
+                },
+                {
+                    "name": "reverse",
+                    "value": "0",
+                    "isPath": false
+                }
+            ],
             "tests": []
         },
         {
